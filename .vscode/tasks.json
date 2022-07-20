@@ -1,0 +1,70 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "1. Compile",
+			"command": "cargo",
+			"args": [
+				"build"
+			],
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "2. Format",
+			"command": "cargo",
+			"args": [
+				"fmt"
+			],
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "3. Generate Docs",
+			"command": "cargo",
+			"args": [
+				"doc",
+				"--document-private-items"
+			],
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "4. Open Docs",
+			"command": "${config:chrome_path}",
+			"args": [
+				"${workspaceFolder}/target/doc/temportal_engine/index.html"
+			],
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "5. Clean",
+			"command": "cargo",
+			"args": [
+				"clean"
+			],
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "6. Run Tests",
+			"command": "cargo",
+			"args": [
+				"test"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "7. Release",
+			"command": "cargo",
+			"args": [
+				"build", "--release"
+			],
+			"group": "build",
+			"problemMatcher": []
+		}
+	]
+}

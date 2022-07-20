@@ -1,0 +1,30 @@
+[package]
+name = "clibuild-rs"
+description = "Command-line interface for executing various scripts or executables"
+version = "0.1.0"
+edition = "2018"
+authors = ["Dustin Yost <dustin.yost.t@gmail.com>"]
+
+[dependencies]
+clap = { version = "3.1.6", features = ["derive", "env"] }
+
+# [error] collapsing any error into one result type
+anyhow = "1.0"
+# [error] easy implementation of new errors
+thiserror = "1.0"
+
+# [async] base async traits
+futures = "0.3"
+# [async] adv async traits
+futures-util = "0.3"
+# [async] async/await syntax and multithreading
+tokio = { version = "1.15", features = ["full"] }
+
+# [serialization] general usage
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+glob = "0.3"
+regex = "1.5"
+# [utility] catching signals like CTRL+C from the terminal
+signal-hook = "0.3"
